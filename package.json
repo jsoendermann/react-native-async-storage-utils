@@ -1,0 +1,18 @@
+{
+  "name": "react-native-async-storage-utils",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "Apache-2.0",
+  "scripts": {
+    "prepare": "npm run build",
+    "build": "tsc"
+  },
+  "peerDependencies": {
+    "react-native": "*"
+  },
+  "devDependencies": {
+    "@types/react-native": "^0.47.8",
+    "react-native": "^0.47.2",
+    "typescript": "^2.4.2"
+  }
+}
