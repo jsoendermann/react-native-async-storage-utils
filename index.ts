@@ -11,6 +11,34 @@ export interface IAsyncStorage {
   removeItem(key: string, callback?: (error?: Error) => void): Promise<void>
 }
 
+export class AsyncStorageMock implements IAsyncStorage {
+  public data: any = {}
+
+  public getItem(
+    key: string,
+    callback?: (error?: Error, result?: string) => void,
+  ): Promise<string> {
+    return this.data[key]
+  }
+
+  public setItem(
+    key: string,
+    value: string,
+    callback?: (error?: Error) => void,
+  ): Promise<void> {
+    this.data[key] = value
+    return Promise.resolve(undefined)
+  }
+
+  public removeItem(
+    key: string,
+    callback?: (error?: Error) => void,
+  ): Promise<void> {
+    delete this.data[key]
+    return Promise.resolve(undefined)
+  }
+}
+
 export const getObject = async (
   asyncStorage: IAsyncStorage,
   key: string,
