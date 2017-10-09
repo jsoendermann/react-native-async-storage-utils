@@ -14,5 +14,8 @@
     "@types/react-native": "^0.47.8",
     "react-native": "^0.47.2",
     "typescript": "^2.4.2"
+  },
+  "dependencies": {
+    "extended-json-js": "^0.3.0"
   }
 }

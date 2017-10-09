@@ -1326,6 +1326,10 @@ extend@~3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/extend/-/extend-3.0.1.tgz#a755ea7bc1adfcc5a31ce7e762dbaadc5e636444"
 
+extended-json-js@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/extended-json-js/-/extended-json-js-0.3.0.tgz#1f298d82095fc33f1a4908dc8910785124088c03"
+
 external-editor@^2.0.4:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/external-editor/-/external-editor-2.0.4.tgz#1ed9199da9cbfe2ef2f7a31b2fde8b0d12368972"

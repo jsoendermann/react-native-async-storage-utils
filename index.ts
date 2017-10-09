@@ -1,3 +1,5 @@
+const { parse, stringify } = require('extended-json-js')
+
 export interface IAsyncStorage {
   getItem(
     key: string,
@@ -44,7 +46,7 @@ export const getObject = async (
   key: string,
 ): Promise<object> => {
   const str = await asyncStorage.getItem(key)
-  return JSON.parse(str || '{}')
+  return parse(str || '{}')
 }
 
 export const getArray = async (
@@ -52,7 +54,7 @@ export const getArray = async (
   key: string,
 ): Promise<any[]> => {
   const str = await asyncStorage.getItem(key)
-  return JSON.parse(str || '[]')
+  return parse(str || '[]')
 }
 
 export const setValue = async (
@@ -60,7 +62,7 @@ export const setValue = async (
   key: string,
   value: any[],
 ) => {
-  const str = JSON.stringify(value)
+  const str = stringify(value)
   return asyncStorage.setItem(key, str)
 }
 
